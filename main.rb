@@ -6,10 +6,13 @@ string_to_hash = STDIN.gets.chomp
 puts "Каким способом зашифровать:"
 puts "1. MD5"
 puts "2. SHA1"
+puts "3. SHA2"
 algorithm = STDIN.gets.to_i
 
 if algorithm == 1
   puts HashGenerator.new(string_to_hash).hash_md5
 elsif algorithm == 2
   puts HashGenerator.new(string_to_hash).hash_sha1
+elsif algorithm == 3
+  puts HashGenerator.new(string_to_hash).hash_sha2
 end

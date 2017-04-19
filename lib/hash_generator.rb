@@ -10,4 +10,8 @@ class HashGenerator
   def hash_sha1
     Digest::SHA1.hexdigest @string_to_hash
   end
+
+  def hash_sha2
+    Digest::SHA2.hexdigest @string_to_hash
+  end
 end
